@@ -1,0 +1,13 @@
+name: Test
+on:
+  push:
+env:
+  A: >
+    BLA=a
+    FOO=${{ secrets.TEST }}
+
+jobs:
+  test:
+    steps:
+      - name: Env
+        run: printenv
